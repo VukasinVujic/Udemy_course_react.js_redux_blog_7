@@ -9,7 +9,7 @@ export const fetchPosts =  () => {
     // up longer, down short
     return async dispatch => { const response = await jsonPlaceholder.get('/posts'); 
     
-    dispatch({type: "FETCH_POSTS", payload: response })
+    dispatch({type: "FETCH_POSTS", payload: response.data })
 
     };
         // up short, down longer
